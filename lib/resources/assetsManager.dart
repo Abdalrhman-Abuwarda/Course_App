@@ -5,6 +5,7 @@ class ImageAssets {
   static const String mainImage = "$imagesPath/graphicforgot.png";
 
   static const String pannerImage = "$imagesPath/panner.png";
+  static const List imagesAD = [pannerImage,pannerImage,pannerImage];
 
   static const String profileImage = "$imagesPath/profile_image.png";
 

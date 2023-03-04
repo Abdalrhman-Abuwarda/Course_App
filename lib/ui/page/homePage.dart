@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hw3/ui/shared/cardAD.dart';
 import '../../core/model/freeCoursesModel.dart';
 import '../../core/model/paidCousesModel.dart';
 import '../../resources/assetsManager.dart';
@@ -8,11 +11,47 @@ import '../../resources/colorsManager.dart';
 import '../../resources/valuesManager.dart';
 import '../shared/customListTile.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final List<FreeCoursesModel> freeList = FreeCoursesModel.listFreeCourses;
+
   final List<PaidCoursesModel> paidList = PaidCoursesModel.listPaidCourses;
+
+  int _currentPage = 0;
+  Timer? _timer;
+  final PageController _pageController = PageController(
+    initialPage: 0,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    _timer = Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+      if (_currentPage < 2) {
+        _currentPage++;
+      } else {
+        _currentPage = 0;
+      }
+
+      _pageController.animateToPage(
+        _currentPage,
+        duration: const Duration(milliseconds: 500),
+        curve: Curves.linearToEaseOut,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _timer?.cancel();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -98,16 +137,11 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               // addVerticalSpace(AppSize.s5.h),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Image.asset(ImageAssets.pannerImage),
-                    Image.asset(ImageAssets.pannerImage),
-                  ],
-                ),
-              ),
-              // addVerticalSpace(AppSize.s30.h),
+             CardAD(listImage: ImageAssets.imagesAD, controller: _pageController, onTap: (index) {
+               setState(() {
+                 _currentPage = index;
+               });
+             },),
               Row(
                 children: [
                   Text(
