@@ -39,8 +39,8 @@ class ForgetPasswordPage extends StatelessWidget {
               addVerticalSpace(AppSize.s25.h),
               const CustomTextField(hintText: 'Email Address', prefixIcon: Icon(Icons.email_outlined),),
               addVerticalSpace(AppSize.s15.h),
-              ElevatedButton(onPressed: (){},
-                  child: const Text("Login", style: TextStyle(color: ColorManager.primaryFontColor),)),
+              ElevatedButton(onPressed: (){ServiceNavigations.serviceNavi.pushNamedReplacement(RouteGenerator.changePasswordPage);},
+                  child: const Text("Next", style: TextStyle(color: ColorManager.primaryFontColor),)),
               addVerticalSpace(AppSize.s146.h),
               FooterPage(
                 mainText: "Remember Password?",

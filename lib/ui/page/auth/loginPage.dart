@@ -38,7 +38,7 @@ class LoginPage extends StatelessWidget {
                 ],
               ),
               addVerticalSpace(AppSize.s18.h),
-              ElevatedButton(onPressed: (){},
+              ElevatedButton(onPressed: (){ServiceNavigations.serviceNavi.pushNamedReplacement(RouteGenerator.homePage);},
                   child: const Text("Login", style: TextStyle(color: ColorManager.primaryFontColor),)),
               addVerticalSpace(AppSize.s100.h),
                 FooterPage(

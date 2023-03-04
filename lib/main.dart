@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeManager.lightTheme,
         debugShowCheckedModeBanner: false,
         navigatorKey: ServiceNavigations.serviceNavi.navKey,
-        onGenerateRoute: RoutsGnerate.generateRoute,
+        onGenerateRoute: RoutsGenerate.generateRoute,
         home: SplashPage(),
       ),
     );

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="profile" transform="translate(-7174.5 -7174.5)">
+    <path id="Path_2059" data-name="Path 2059" d="M7184.522,7198.38a3.517,3.517,0,0,1,1.778-2.16c.937-.351,1.917-.117,2.52-.72v-.72a7.859,7.859,0,0,1-1.44-1.8,8.18,8.18,0,0,0-.359-1.44c-.36-1.44-.72-5.04,3.24-5.04s3.6,3.6,3.24,5.04a8.171,8.171,0,0,0-.36,1.44,7.845,7.845,0,0,1-1.44,1.8v.72c.6.6,1.583.369,2.52.72a3.589,3.589,0,0,1,1.8,2.16" transform="translate(-5.76 -7.04)" fill="#ecb7bf" stroke="#ecb7bf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <circle id="Ellipse_8" data-name="Ellipse 8" cx="9" cy="9" r="9" transform="translate(7175.5 7175.5)" fill="none" stroke="#ecb7bf" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    <rect id="Rectangle_36" data-name="Rectangle 36" width="10" height="2" transform="translate(7179.5 7190.5)" fill="#ecb7bf"/>
+  </g>
+</svg>
