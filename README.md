@@ -1,4 +1,4 @@
-# hw3
+# Course App
 
 A new Flutter project.
 
